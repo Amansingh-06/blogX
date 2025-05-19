@@ -1,12 +1,60 @@
-# React + Vite
+# 📝 blogX — Full Stack Blog Editor with Auto-Save Draft Feature
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+blogX is a full-stack blog editor web application that allows users to create, edit, save drafts, and publish blog posts with an auto-save feature. Built as part of an internship assignment, this project showcases frontend/backend integration, REST APIs, MongoDB usage, and optional JWT-based authentication.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Write blogs with title, content, and optional tags
+- Save as Draft and Publish functionality
+- Auto-save drafts every 30 seconds or after 5 seconds of user inactivity
+- Visual notification on auto-save
+- View list of all blogs (separate tabs for Published and Drafts)
+- Edit and update existing blogs/drafts
+- JWT Authentication for protected routes (optional bonus)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧱 Tech Stack
+
+### Frontend
+- React.js (with Hooks)
+- Axios (for API calls)
+- react-hot-toast
+- Tailwind CSS
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JSON Web Token (JWT) - for authentication (optional)
+
+---
+
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file in the `backend` with the following keys:
+
+```env
+PORT=5000
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/blogX
+JWT_SECRET=your_jwt_secret_key
+
+**## setup**
+(backend)
+cd backend
+npm install
+touch .env
+# Add PORT, MONGODB_URI, JWT_SECRET to .env
+node server.js
+(frontend)
+cd blogX
+npm install
+npm run dev
+
+
